@@ -30,6 +30,8 @@ class SelectUserFragment : Fragment() {
             binding.cardLender.isChecked = !binding.cardLender.isChecked
         }
 
+        binding.btnBack.setOnClickListener { findNavController().popBackStack() }
+
         binding.cardBorrower.setOnClickListener {
             switchOff(binding.cardLender)
             switchOn(binding.cardBorrower)
@@ -37,7 +39,8 @@ class SelectUserFragment : Fragment() {
         }
 
         binding.btnNext.setOnClickListener {
-            findNavController().navigate(SelectUserFragmentDirections.actionSelectUserFragmentToSignUpBorrowerFragment())
+            val type = if (binding.cardLender.isChecked) "Lender" else "Borrower"
+            findNavController().navigate(SelectUserFragmentDirections.actionSelectUserFragmentToSignUpBorrowerFragment(type))
         }
     }
 

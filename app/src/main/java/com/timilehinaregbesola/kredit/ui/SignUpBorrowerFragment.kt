@@ -6,12 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.timilehinaregbesola.kredit.ui.SignUpBorrowerFragmentDirections
 import com.timilehinaregbesola.kredit.databinding.FragmentSignUpBorrowerBinding
 
 class SignUpBorrowerFragment : Fragment() {
 
     private lateinit var binding: FragmentSignUpBorrowerBinding
+    private val safeArgs: SignUpBorrowerFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,7 +26,9 @@ class SignUpBorrowerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnNext.setOnClickListener {
-            findNavController().navigate(SignUpBorrowerFragmentDirections.actionSignUpBorrowerFragmentToBorrowerOtpFragment())
+            findNavController().navigate(SignUpBorrowerFragmentDirections.actionSignUpBorrowerFragmentToBorrowerOtpFragment(safeArgs.userType))
         }
+
+        binding.btnBack.setOnClickListener { findNavController().popBackStack() }
     }
 }

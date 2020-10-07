@@ -48,10 +48,19 @@
         <action
             android:id="@+id/action_signUpBorrowerFragment_to_borrowerOtpFragment"
             app:destination="@id/borrowerOtpFragment" />
+        <argument
+            android:name="userType"
+            app:argType="string"
+            android:defaultValue="Borrower" />
     </fragment>
     <fragment
         android:id="@+id/borrowerOtpFragment"
         android:name="com.timilehinaregbesola.kredit.ui.BorrowerOtpFragment"
         android:label="fragment_borrower_otp"
-        tools:layout="@layout/fragment_borrower_otp" />
+        tools:layout="@layout/fragment_borrower_otp" >
+        <argument
+            android:name="userType"
+            app:argType="string"
+            android:defaultValue="Borrower" />
+    </fragment>
 </navigation>

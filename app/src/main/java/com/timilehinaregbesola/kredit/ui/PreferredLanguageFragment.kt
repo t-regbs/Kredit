@@ -40,6 +40,7 @@ class PreferredLanguageFragment : Fragment() {
 //                loginViewModel.userId.value = "1"
 //                Timber.d("userType: $type")
             }
+        binding.btnBack.setOnClickListener { findNavController().popBackStack() }
         binding.btnNext.setOnClickListener {
             findNavController().navigate(PreferredLanguageFragmentDirections.actionPreferredLanguageFragmentToSelectUserFragment())
         }

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="60dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_loan_settings"
+        android:text="Loan Settings"
+        android:textSize="24sp"
+        android:textColor="@color/blue_button_color"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/spinner_min_credit_score"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Minimum Credit Score"
+        android:textColorHint="@color/grey_text_color"
+        app:endIconTint="@color/grey_text_color"
+        app:hintTextColor="@color/black"
+        app:boxBackgroundColor="@color/grey_form_color">
+
+        <AutoCompleteTextView
+            android:id="@+id/min_credit_score_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_min_amount"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Minimum Loan Amount"
+        android:textColorHint="@color/grey_text_color"
+        app:endIconTint="@color/black"
+        app:hintTextColor="@color/black"
+        app:boxBackgroundColor="@color/grey_form_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/spinner_min_interest_rates"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Minimum interest Rates"
+        android:textColorHint="@color/grey_text_color"
+        app:endIconTint="@color/grey_text_color"
+        app:hintTextColor="@color/black"
+        app:boxBackgroundColor="@color/grey_form_color">
+
+        <AutoCompleteTextView
+            android:id="@+id/min_interest_rate_dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:inputType="none"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_min_payback"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Minimum Payback time"
+        android:textColorHint="@color/grey_text_color"
+        app:endIconTint="@color/black"
+        app:hintTextColor="@color/black"
+        app:boxBackgroundColor="@color/grey_form_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textAllCaps="false"
+        android:text="Save Settings"/>
+</LinearLayout>

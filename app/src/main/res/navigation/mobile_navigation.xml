@@ -72,5 +72,50 @@
         android:id="@+id/psycTest2Fragment"
         android:name="com.timilehinaregbesola.kredit.ui.home.PsycTest2Fragment"
         android:label="fragment_psyc_test2"
-        tools:layout="@layout/fragment_psyc_test2" />
+        tools:layout="@layout/fragment_psyc_test2" >
+        <action
+            android:id="@+id/action_psycTest2Fragment_to_psycTest3Fragment"
+            app:destination="@id/psycTest3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/psycTest3Fragment"
+        android:name="com.timilehinaregbesola.kredit.ui.home.PsycTest3Fragment"
+        android:label="fragment_psyc_test3"
+        tools:layout="@layout/fragment_psyc_test3" >
+        <action
+            android:id="@+id/action_psycTest3Fragment_to_psycTest4Fragment"
+            app:destination="@id/psycTest4Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/psycTest4Fragment"
+        android:name="com.timilehinaregbesola.kredit.ui.home.PsycTest4Fragment"
+        android:label="fragment_psyc_test4"
+        tools:layout="@layout/fragment_psyc_test4" >
+        <action
+            android:id="@+id/action_psycTest4Fragment_to_psycTest5Fragment"
+            app:destination="@id/psycTest5Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/psycTest5Fragment"
+        android:name="com.timilehinaregbesola.kredit.ui.home.PsycTest5Fragment"
+        android:label="fragment_psyc_test5"
+        tools:layout="@layout/fragment_psyc_test5" >
+        <action
+            android:id="@+id/action_psycTest5Fragment_to_psycTest6Fragment"
+            app:destination="@id/psycTest6Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/psycTest6Fragment"
+        android:name="com.timilehinaregbesola.kredit.ui.home.PsycTest6Fragment"
+        android:label="fragment_psyc_test6"
+        tools:layout="@layout/fragment_psyc_test6" >
+        <action
+            android:id="@+id/action_psycTest6Fragment_to_psycTest7Fragment"
+            app:destination="@id/psycTest7Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/psycTest7Fragment"
+        android:name="com.timilehinaregbesola.kredit.ui.home.PsycTest7Fragment"
+        android:label="fragment_psyc_test7"
+        tools:layout="@layout/fragment_psyc_test7" />
 </navigation>

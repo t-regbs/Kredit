@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.timilehinaregbesola.kredit.R
-import com.timilehinaregbesola.kredit.databinding.FragmentPsycTest1Binding
-import com.timilehinaregbesola.kredit.databinding.FragmentPsycTest2Binding
+import com.timilehinaregbesola.kredit.databinding.FragmentPsycTest5Binding
+import com.timilehinaregbesola.kredit.databinding.FragmentPsycTest6Binding
 
-class PsycTest2Fragment : Fragment() {
+class PsycTest6Fragment : Fragment() {
 
-    private lateinit var binding: FragmentPsycTest2Binding
+    private lateinit var binding: FragmentPsycTest6Binding
     private var isBtnYes: Boolean? = null
     private var answer = "-------"
 
@@ -21,7 +21,7 @@ class PsycTest2Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentPsycTest2Binding.inflate(inflater, container, false)
+        binding = FragmentPsycTest6Binding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -49,7 +49,7 @@ class PsycTest2Fragment : Fragment() {
                 } else {
                     answer.replaceFirst("-", "N")
                 }
-                findNavController().navigate(PsycTest2FragmentDirections.actionPsycTest2FragmentToPsycTest3Fragment())
+                findNavController().navigate(PsycTest6FragmentDirections.actionPsycTest6FragmentToPsycTest7Fragment())
             }
         }
     }

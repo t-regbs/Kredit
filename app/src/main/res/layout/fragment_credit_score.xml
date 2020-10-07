@@ -49,6 +49,29 @@
                 app:layout_constraintTop_toBottomOf="@id/txt_great_score" />
 
             <TextView
+                android:id="@+id/txt_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="15"
+                android:layout_marginTop="43dp"
+                android:layout_marginEnd="42dp"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            
+            <View
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:id="@+id/up_arrow"
+                app:layout_constraintTop_toTopOf="@id/txt_15"
+                android:background="@drawable/ic_baseline_arrow_upward_24"
+                app:layout_constraintEnd_toStartOf="@id/txt_15"
+                android:backgroundTint="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/txt_15"/>
+
+            <TextView
                 android:id="@+id/txt_great_score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

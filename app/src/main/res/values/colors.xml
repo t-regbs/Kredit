@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00587A</color>
+    <color name="colorPrimaryDark">#0f3057</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="off_white">#E5E5E5</color>
+    <color name="black">#000000</color>
+    <color name="blue_button_color">#00587A</color>
+    <color name="background_color">#0f3057</color>
+    <color name="green_see_through">#4D008891</color>
+    <color name="alt_text_color">#031A6E</color>
+    <color name="grey_color">#090909</color>
+    <color name="red_color">#E63946</color>
+    <color name="profile_icon_color">#05203D</color>
+    <color name="divider">#E5EAF6</color>
+    <color name="grey_form_color">#9E9E9E</color>
+    <color name="grey_text_color">#C4C4C4</color>
+    <color name="mint_green">#8006492C</color>
+    <color name="green">#0C9359</color>
+</resources>

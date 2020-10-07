@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_white"
+    tools:context=".ui.home.CreditScoreFragment">
+
+    <TextView
+        android:id="@+id/txt_credit_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Credit Score"
+        android:textColor="@color/blue_button_color"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_large"
+        android:layout_width="match_parent"
+        android:layout_height="222dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardElevation="12dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_credit_score">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_790"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="790"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_great_score" />
+
+            <TextView
+                android:id="@+id/txt_great_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="28dp"
+                android:text="Good Score"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_score_updated_weekly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Credit Score Updated weekly"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_790" />
+
+            <View
+                android:id="@+id/barr"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rectangle_1256"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_score_updated_weekly" />
+
+            <TextView
+                android:id="@+id/txt_300"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="300"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@id/barr"
+                app:layout_constraintTop_toBottomOf="@id/barr" />
+
+            <TextView
+                android:id="@+id/txt_850"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="850"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@id/barr"
+                app:layout_constraintTop_toBottomOf="@id/barr" />
+
+            <TextView
+                android:id="@+id/txt_800"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:text="800"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@id/txt_850"
+                app:layout_constraintTop_toBottomOf="@id/barr" />
+
+            <TextView
+                android:id="@+id/txt_740"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:text="740"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@id/txt_800"
+                app:layout_constraintTop_toBottomOf="@id/barr" />
+
+            <TextView
+                android:id="@+id/txt_670"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="40dp"
+                android:text="670"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@id/txt_740"
+                app:layout_constraintTop_toBottomOf="@id/barr" />
+
+            <TextView
+                android:id="@+id/txt_take_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:text="Take Credit Score Test"
+                android:textColor="@color/blue_button_color"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barr" />
+
+            <ImageButton
+                android:id="@+id/btn_take_test"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="20dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_navigate_next_24"
+                android:tint="@color/blue_button_color"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_take_test"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txt_take_test" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

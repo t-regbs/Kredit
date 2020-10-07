@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    tools:context=".ui.LoginFragment">
+
+    <TextView
+        android:id="@+id/txt_welcome"
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:textSize="32sp"
+        android:layout_marginStart="16dp"
+        android:text="Welcome back, Ciroma"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/password"
+        android:textColorHint="@color/blue_button_color"
+        app:boxBackgroundColor="@color/white"
+        app:endIconMode="password_toggle"
+        app:endIconDrawable="@drawable/password_end_icon"
+        app:endIconTint="@color/blue_button_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_welcome"
+        app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
+        app:startIconTint="@color/blue_button_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_signin"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/login"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/blue_button_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_password" />
+
+    <TextView
+        android:id="@+id/txt_not_you"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="110dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_signin"
+        android:text="Not you?"
+        android:textSize="14sp"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/txt_switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="48dp"
+        android:text="Switch Account"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txt_not_you"
+        app:layout_constraintTop_toBottomOf="@id/btn_signin" />
+
+    <TextView
+        android:id="@+id/txt_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Forgot password?"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_not_you"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

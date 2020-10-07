@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.timilehinaregbesola.kredit.ui.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_preferredLanguageFragment"
+            app:destination="@id/preferredLanguageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.timilehinaregbesola.kredit.ui.LoginFragment"
+        android:label="fragment_preferred_language"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/selectUserFragment"
+        android:name="com.timilehinaregbesola.kredit.ui.SelectUserFragment"
+        android:label="fragment_select_user"
+        tools:layout="@layout/fragment_select_user" >
+        <action
+            android:id="@+id/action_selectUserFragment_to_signUpBorrowerFragment"
+            app:destination="@id/signUpBorrowerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/preferredLanguageFragment"
+        android:name="com.timilehinaregbesola.kredit.ui.PreferredLanguageFragment"
+        android:label="fragment_preferred_language"
+        tools:layout="@layout/fragment_preferred_language" >
+        <action
+            android:id="@+id/action_preferredLanguageFragment_to_selectUserFragment"
+            app:destination="@id/selectUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpBorrowerFragment"
+        android:name="com.timilehinaregbesola.kredit.ui.SignUpBorrowerFragment"
+        android:label="fragment_sign_up_borrower"
+        tools:layout="@layout/fragment_sign_up_borrower" >
+        <action
+            android:id="@+id/action_signUpBorrowerFragment_to_borrowerOtpFragment"
+            app:destination="@id/borrowerOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/borrowerOtpFragment"
+        android:name="com.timilehinaregbesola.kredit.ui.BorrowerOtpFragment"
+        android:label="fragment_borrower_otp"
+        tools:layout="@layout/fragment_borrower_otp" />
+</navigation>

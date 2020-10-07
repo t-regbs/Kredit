@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.timilehinaregbesola.kredit.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_creditScoreFragment"
+            app:destination="@id/creditScoreFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_stats"
+        android:name="com.timilehinaregbesola.kredit.ui.stats.StatsFragment"
+        android:label="@string/title_stats"
+        tools:layout="@layout/fragment_stats" >
+        <action
+            android:id="@+id/action_navigation_stats_to_loanSearchResultFragment"
+            app:destination="@id/loanSearchResultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_cards"
+        android:name="com.timilehinaregbesola.kredit.ui.cards.CardsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_cards" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.timilehinaregbesola.kredit.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/creditScoreFragment"
+        android:name="com.timilehinaregbesola.kredit.ui.home.CreditScoreFragment"
+        android:label="fragment_credit_score"
+        tools:layout="@layout/fragment_credit_score" >
+        <action
+            android:id="@+id/action_creditScoreFragment_to_creditScoreTestFragment"
+            app:destination="@id/creditScoreTestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditScoreTestFragment"
+        android:name="com.timilehinaregbesola.kredit.ui.home.CreditScoreTestFragment"
+        android:label="fragment_credit_score_test"
+        tools:layout="@layout/fragment_credit_score_test" >
+        <action
+            android:id="@+id/action_creditScoreTestFragment_to_psycTest1Fragment"
+            app:destination="@id/psycTest1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanSearchResultFragment"
+        android:name="com.timilehinaregbesola.kredit.ui.stats.LoanSearchResultFragment"
+        android:label="fragment_loan_search_result"
+        tools:layout="@layout/fragment_loan_search_result" />
+    <fragment
+        android:id="@+id/psycTest1Fragment"
+        android:name="com.timilehinaregbesola.kredit.ui.home.PsycTest1Fragment"
+        android:label="fragment_psyc_test1"
+        tools:layout="@layout/fragment_psyc_test1" >
+        <action
+            android:id="@+id/action_psycTest1Fragment_to_psycTest2Fragment"
+            app:destination="@id/psycTest2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/psycTest2Fragment"
+        android:name="com.timilehinaregbesola.kredit.ui.home.PsycTest2Fragment"
+        android:label="fragment_psyc_test2"
+        tools:layout="@layout/fragment_psyc_test2" />
+</navigation>

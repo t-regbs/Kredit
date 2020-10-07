@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Kredit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="password">Password</string>
+    <string name="login">Log In</string>
+    <string name="select_language">Select Language</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="otp_info">For the safety of your personal data You will receive an OTP code to verify your number.</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_stats">Stats</string>
+    <string name="title_cards">Cards</string>
+    <string name="title_profile">Profile</string>
+    <string name="you_are_in_good_shape">You are in good shape, a higher score would ensure you recieve loans with more flexible offers</string>
+    <string name="water_level_low_refill">This Aepod’s water level is low (10%), you should refill it.</string>
+    <string name="psyc_question_one">I am a leader in most of my groups</string>
+    <string name="psyc_question_two">Presentations are difficult  for me?</string>
+</resources>

@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_white"
+    tools:context=".ui.home.CreditScoreTestFragment">
+
+    <TextView
+        android:id="@+id/txt_credit_score_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Credit Score Test"
+        android:textColor="@color/blue_button_color"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_large"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_credit_score_test">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:paddingBottom="100dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_personal_information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Personal Information"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_personal_information"
+                    tools:layout_editor_absoluteX="33dp" />
+
+                <TextView
+                    android:id="@+id/txt_state_of_origin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="State of Origin"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_personal_information" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_state_of_origin"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="--Select One--"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_state_of_origin">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/state_of_origin_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/white" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Date of Birth"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_state_of_origin" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_month"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="100dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:enabled="false"
+                    android:hint="Month"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_dob">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/month_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_day"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="79dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="51dp"
+                    android:layout_marginTop="9dp"
+                    android:enabled="false"
+                    android:hint="Day"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintStart_toEndOf="@+id/spinner_month"
+                    app:layout_constraintTop_toBottomOf="@id/txt_dob">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/day_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_year"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="79dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="52dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="Year"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_dob">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/year_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Phone Number"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_month" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edt_phone_number"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="163dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:enabled="false"
+                    android:hint="+234(81-6614-3412)"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_phone_number">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_marital_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Marital Status"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/spinner_marital_status"
+                    app:layout_constraintTop_toBottomOf="@+id/spinner_month" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_marital_status"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="134dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="--Select One--"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_marital_status">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/marital_status__dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/txt_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Location"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_phone_number" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edt_location"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="95dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:enabled="false"
+                    android:hint="Location"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_location">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_financial_information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Financial Information"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_location" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_financial_information"
+                    tools:layout_editor_absoluteX="33dp" />
+
+                <TextView
+                    android:id="@+id/txt_type_of_business"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Type of Business"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_financial_information" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_business_type"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="146dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:enabled="false"
+                    android:hint="--Select One--"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_type_of_business">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/business_type_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_no_dependents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="No. of dependents"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/spinner_marital_status"
+                    app:layout_constraintTop_toBottomOf="@id/txt_financial_information" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edt_dependents"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="129dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="No. of dependents"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_no_dependents">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:selectAllOnFocus="true"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_do_you_pay_bills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Do you pay bills?"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_business_type" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_do_you_pay"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="--Select One--"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_do_you_pay_bills">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/do_you_pay_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_no_of_loans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="No. of Credit Loans Taken?"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_do_you_pay" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_no_of_loans"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="--Select One--"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_no_of_loans">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/no_of_loans_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_how_frequently_recharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="How Frequently do you Recharge?"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_no_of_loans" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_how_frequently_recharge"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="--Select One--"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_how_frequently_recharge">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/how_frequently_recharge_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_how_long_in_business"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="How long have you been in business?"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_how_frequently_recharge" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_how_long_in_business"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="--Select One--"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_how_long_in_business">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/how_long_in_business_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_belong_to_cooperative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text=" Do you belong to any Cooperative (Ajo, Esusu)?"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_how_long_in_business" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_belong_to_cooperative"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="--Select One--"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_belong_to_cooperative">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/belong_to_cooperative_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_guarantors_information"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Guarantors Information"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_belong_to_cooperative" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/divider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_guarantors_information"
+                    tools:layout_editor_absoluteX="33dp" />
+
+                <TextView
+                    android:id="@+id/txt_guaran_fullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="25dp"
+                    android:text="Fullname"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_guarantors_information" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_guaran_fullname"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="--Select One--"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_guaran_fullname">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/guaran_fullname_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_guaran_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Phone Number"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_guaran_fullname" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_guaran_phone"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="--Select One--"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_guaran_phone">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/guaran_phone_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/txt_guaran_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Email Address"
+                    android:textColor="@color/blue_button_color"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_guaran_phone" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/spinner_guaran_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="16dp"
+                    android:enabled="false"
+                    android:hint="--Select One--"
+                    android:textColorHint="@color/grey_text_color"
+                    app:boxBackgroundColor="@color/grey_form_color"
+                    app:endIconTint="@color/grey_text_color"
+                    app:hintTextColor="@color/grey_text_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_guaran_email">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/guaran_email_dropdown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="@color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="36dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Next"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/blue_button_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spinner_guaran_email" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:orientation="vertical"
-                    android:elevation="1dp"
+                    android:layout_marginBottom="36dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintBottom_toTopOf="@id/btn_add_card"
@@ -53,7 +53,6 @@
                     tools:listitem="@layout/card_item"/>
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_add_card"
-                    android:layout_marginTop="28dp"
                     android:layout_width="match_parent"
                     android:layout_height="62dp"
                     android:layout_marginBottom="36dp"

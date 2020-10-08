@@ -21,7 +21,11 @@
         android:id="@+id/loginFragment"
         android:name="com.timilehinaregbesola.kredit.ui.LoginFragment"
         android:label="fragment_preferred_language"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_newLoginFragment"
+            app:destination="@id/newLoginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/selectUserFragment"
         android:name="com.timilehinaregbesola.kredit.ui.SelectUserFragment"
@@ -63,4 +67,9 @@
             app:argType="string"
             android:defaultValue="Borrower" />
     </fragment>
+    <fragment
+        android:id="@+id/newLoginFragment"
+        android:name="com.timilehinaregbesola.kredit.ui.NewLoginFragment"
+        tools:layout="@layout/fragment_login_full"
+        android:label="NewLoginFragment" />
 </navigation>

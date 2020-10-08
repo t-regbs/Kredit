@@ -21,13 +21,16 @@ import java.util.*
 
 class LoanSearchResultFragment : Fragment() {
     private lateinit var binding: FragmentLoanSearchResultBinding
-    private val adapter = LoanAdapter()
+    private lateinit var adapter: LoanAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        adapter = LoanAdapter(LoanAdapter.LoanListener {
+
+        })
         binding = FragmentLoanSearchResultBinding.inflate(inflater, container, false).apply {
             rvLoans.adapter = adapter
         }

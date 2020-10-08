@@ -2,48 +2,52 @@ package com.timilehinaregbesola.kredit.ui
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.timilehinaregbesola.kredit.HomeActivity
 import com.timilehinaregbesola.kredit.LenderActivity
 import com.timilehinaregbesola.kredit.R
-import com.timilehinaregbesola.kredit.databinding.FragmentLoginBinding
 import com.timilehinaregbesola.kredit.databinding.FragmentLoginFullBinding
 
-class LoginFragment : Fragment() {
+class NewLoginFragment : Fragment() {
 
-    private lateinit var binding: FragmentLoginBinding
+    private lateinit var binding: FragmentLoginFullBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        binding = FragmentLoginFullBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.txtSwitchAccount.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToNewLoginFragment())
+        binding.txtSignUp.setOnClickListener {
+            findNavController().navigate(R.id.preferredLanguageFragment)
         }
         binding.btnSignin.setOnClickListener {
+            val email = binding.edtEmail.editText?.text.toString().trim()
             val password = binding.edtPassword.editText?.text.toString().trim()
 
             when {
-                password.isBlank() -> {
-                    Toast.makeText(requireContext(), "Please fill in a password", Toast.LENGTH_SHORT).show()
+                email.isBlank() or password.isBlank() -> {
+                    Toast.makeText(requireContext(), "Please fill in email or password", Toast.LENGTH_SHORT).show()
                 }
-                password == "000000" -> {
+                email == "Ciroma" && password == "000000" -> {
                     startActivity(Intent(requireActivity(), HomeActivity::class.java))
                     requireActivity().finish()
                 }
+                email == "Maria" && password == "123456" -> {
+                    startActivity(Intent(requireActivity(), LenderActivity::class.java))
+                    requireActivity().finish()
+                }
                 else -> {
-                    Toast.makeText(requireContext(), "Credentials incorrect!! Check password", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Credentials incorrect!! Check email or password", Toast.LENGTH_SHORT).show()
                 }
             }
 

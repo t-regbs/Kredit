@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.timilehinaregbesola.kredit.ui.PreferredLanguageFragmentDirections
 import com.timilehinaregbesola.kredit.R
@@ -32,9 +33,11 @@ class PreferredLanguageFragment : Fragment() {
             R.layout.custom_simple_spinner_item,
             type
         )
+        var rahh: String = ""
         binding.outlinedExposedDropdown.setAdapter(adapter)
         binding.outlinedExposedDropdown.onItemClickListener =
             AdapterView.OnItemClickListener { parent, _, position, id ->
+                rahh = parent?.getItemAtPosition(position).toString()
 //                val type = parent?.getItemAtPosition(position).toString()
 //                loginViewModel.userType.value = type
 //                loginViewModel.userId.value = "1"
@@ -42,7 +45,12 @@ class PreferredLanguageFragment : Fragment() {
             }
         binding.btnBack.setOnClickListener { findNavController().popBackStack() }
         binding.btnNext.setOnClickListener {
-            findNavController().navigate(PreferredLanguageFragmentDirections.actionPreferredLanguageFragmentToSelectUserFragment())
+            if (rahh == "") {
+                Toast.makeText(requireContext(), "Select something", Toast.LENGTH_SHORT).show()
+            } else {
+                findNavController().navigate(PreferredLanguageFragmentDirections.actionPreferredLanguageFragmentToSelectUserFragment())
+            }
+
         }
 
 

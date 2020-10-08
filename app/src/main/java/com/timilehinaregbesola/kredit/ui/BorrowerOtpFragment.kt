@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.timilehinaregbesola.kredit.HomeActivity
 import com.timilehinaregbesola.kredit.LenderActivity
@@ -26,14 +28,24 @@ class BorrowerOtpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnVerify.setOnClickListener {
-            if (safeArgs.userType == "Borrower") {
-                startActivity(Intent(requireActivity(), HomeActivity::class.java))
-                requireActivity().finish()
+            val pin = binding.pinView.pinResults
+            if (pin.isBlank()) {
+                Toast.makeText(requireContext(), "Enter OTP", Toast.LENGTH_SHORT).show()
+            }
+            if (pin == "0000") {
+                if (safeArgs.userType == "Borrower") {
+                    startActivity(Intent(requireActivity(), HomeActivity::class.java))
+                    requireActivity().finish()
+                } else {
+                    startActivity(Intent(requireActivity(), LenderActivity::class.java))
+                    requireActivity().finish()
+                }
             } else {
-                startActivity(Intent(requireActivity(), LenderActivity::class.java))
-                requireActivity().finish()
+                Toast.makeText(requireContext(), "Incorrect OTP Entered", Toast.LENGTH_SHORT).show()
             }
 
+
         }
+        binding.btnBack.setOnClickListener { findNavController().popBackStack() }
     }
 }

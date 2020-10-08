@@ -5,19 +5,45 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background_color"
-    tools:context=".ui.LoginFragment">
+    tools:context=".ui.NewLoginFragment">
 
     <TextView
         android:id="@+id/txt_welcome"
-        android:layout_width="226dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
         android:textSize="32sp"
         android:layout_marginStart="16dp"
-        android:text="Welcome back, Ciroma"
+        android:text="Welcome again"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/email_address"
+        android:textColorHint="@color/blue_button_color"
+        app:boxBackgroundColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_welcome"
+        app:startIconDrawable="@drawable/ic_outline_email_24"
+        app:startIconTint="@color/blue_button_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:selectAllOnFocus="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edt_password"
@@ -25,7 +51,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:hint="@string/password"
         android:textColorHint="@color/blue_button_color"
@@ -35,7 +61,7 @@
         app:endIconTint="@color/blue_button_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_welcome"
+        app:layout_constraintTop_toBottomOf="@id/edt_email"
         app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
         app:startIconTint="@color/blue_button_color">
 
@@ -53,7 +79,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:text="@string/login"
         android:textSize="16sp"
@@ -72,17 +98,17 @@
         android:layout_marginStart="110dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_signin"
-        android:text="Not you?"
+        android:text="Don't have an account?"
         android:textSize="14sp"
         android:textColor="@color/white"/>
 
     <TextView
-        android:id="@+id/txt_switch_account"
+        android:id="@+id/txt_sign_up"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="48dp"
-        android:text="Switch Account"
+        android:text="Sign Up"
         android:textStyle="bold"
         android:textSize="14sp"
         android:textColor="@color/white"

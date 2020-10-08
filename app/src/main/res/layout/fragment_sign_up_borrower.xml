@@ -49,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="52dp"
+        app:prefixText="+234"
         android:layout_marginEnd="16dp"
         android:hint="@string/phone_number"
         android:textColorHint="@color/blue_button_color"
@@ -61,8 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="phone|number"
-            android:ellipsize="start"
-            android:gravity="center_horizontal"
+            android:maxLength="10"
             android:selectAllOnFocus="true"
             android:textColor="@color/black"
             android:textSize="16sp" />

@@ -7,11 +7,15 @@
         <variable
             name="loan"
             type="com.timilehinaregbesola.kredit.data.model.Loan" />
+        <variable
+            name="clickListener"
+            type="com.timilehinaregbesola.kredit.ui.stats.LoanAdapter.LoanListener" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:backgroundTint="@color/white"
+        android:onClick="@{()-> clickListener.onclick(loan)}"
         app:cardCornerRadius="6dp"
         android:layout_margin="8dp"
         android:layout_height="wrap_content">
